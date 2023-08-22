@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ehPalindromo(str) {
+            str = str.replace(/\s/g, '').toLowerCase();
+
+            const strInvertida = str.split('').reverse().join(''); 
+            //Split separa em caracteres, reverse muda a ordem, join transforma de volta em str
+            return str === strInvertida;
+        }
+
+        document.write(ehPalindromo("arara"));    
+        document.write(ehPalindromo("reconhecer"));
+        document.write(ehPalindromo("casa"));      
+
+    </script>
+</body>
+</html>

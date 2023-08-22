@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Item {
+        constructor(nome, preco, quantidade) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidade = quantidade;
+        }
+
+        calcularTotal() {
+        return this.preco * this.quantidade;
+        }
+        }
+
+        class CarrinhoDeCompras {
+        constructor() {
+        this.itens = [];
+        }
+
+        adicionarItem(item) {
+        this.itens.push(item);
+        }
+
+        mostrarItens() {
+        document.write("Itens no carrinho:");
+        for (const item of this.itens) {
+            document.write(`${item.nome} - Preço: R$${item.preco} - Quantidade: ${item.quantidade} / `);
+        }
+        }
+        }
+
+        const item1 = new Item("maça", 29.99, 2);
+        const item2 = new Item("banana", 49.99, 1);
+        const item3 = new Item("maracuja", 79.99, 1);
+
+        const carrinho = new CarrinhoDeCompras();
+
+        carrinho.adicionarItem(item1);
+        carrinho.adicionarItem(item2);
+        carrinho.adicionarItem(item3);
+
+        carrinho.mostrarItens();
+
+    </script>
+</body>
+</html>

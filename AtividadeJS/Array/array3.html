@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+    function removerDuplicados(array) {
+    const novoArray = [];
+    
+    for (let i = 0; i < array.length; i++) {
+      if (novoArray.indexOf(array[i]) === -1) {
+        novoArray.push(array[i]);
+      }
+    }
+    
+    return novoArray;
+  }
+  const arrayComDuplicados = [1, 2, 2, 3, 4, 4, 5];
+  const arraySemDuplicados = removerDuplicados(arrayComDuplicados);
+  document.write(arraySemDuplicados);
+</script>
+
+</body>
+</html> 

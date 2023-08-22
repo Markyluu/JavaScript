@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        function isPrimo(numero) {
+        if (numero <= 1) {
+          return false;
+        }
+      
+        if (numero <= 3) {
+          return true;
+        }
+      
+        if (numero % 2 === 0 || numero % 3 === 0) {
+          return false;
+        }
+      
+        for (let i = 5; i * i <= numero; i += 6) {
+          if (numero % i === 0 || numero % (i + 2) === 0) {
+            return false;
+          }
+        }
+      
+        return true;
+      }
+      
+      // Exemplos de uso:
+      document.write(isPrimo(8)); // Deverá imprimir: true
+      document.write(isPrimo(11)); // Deverá imprimir: false
+      
+    </script>
+</body>
+</html>

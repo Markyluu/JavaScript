@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+
+function convMaiusculas(array) {
+  const novoArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const palavraMaiuscula = array[i].toUpperCase();
+    novoArray.push(palavraMaiuscula);
+  }
+
+  return novoArray;
+}
+
+const palavras = ['estou', 'com', 'fome'];
+const palavrasMaiusculas = convMaiusculas(palavras);
+document.write(palavrasMaiusculas);
+
+</script>
+
+</body>
+</html> 
